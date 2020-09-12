@@ -19,8 +19,11 @@
                                 <rect key="frame" x="120" y="63" width="134" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Show Message"/>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pca-eM-Dsi"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYA-oK-fBS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jYA-oK-fBS">
                                 <rect key="frame" x="16" y="128" width="343" height="519"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyj-kP-hzO">
@@ -35,17 +38,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jYA-oK-fBS" secondAttribute="bottom" constant="20" id="DlN-nN-7D4"/>
                             <constraint firstItem="Oyj-kP-hzO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="H2K-Rp-8xU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Msy-Ts-51q" secondAttribute="trailing" constant="121" id="KIV-yr-UGP"/>
                             <constraint firstItem="jYA-oK-fBS" firstAttribute="top" secondItem="Msy-Ts-51q" secondAttribute="bottom" constant="32" id="NeX-rz-WDm"/>
+                            <constraint firstItem="jYA-oK-fBS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O2y-aC-MmR"/>
                             <constraint firstItem="Oyj-kP-hzO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XhE-pa-XFR"/>
                             <constraint firstItem="Msy-Ts-51q" firstAttribute="top" secondItem="Oyj-kP-hzO" secondAttribute="bottom" constant="8" id="dhG-qh-InL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oyj-kP-hzO" secondAttribute="trailing" constant="16" id="fcA-ri-YLR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jYA-oK-fBS" secondAttribute="trailing" constant="16" id="gDZ-K1-c2l"/>
                             <constraint firstItem="Msy-Ts-51q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="hiC-WS-r47"/>
                             <constraint firstItem="Msy-Ts-51q" firstAttribute="top" secondItem="Oyj-kP-hzO" secondAttribute="bottom" constant="8" id="ywu-eI-M0h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="jYA-oK-fBS" id="awC-iB-O4R"/>
+                        <outlet property="messageLabel" destination="Oyj-kP-hzO" id="M1y-tg-lLX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
